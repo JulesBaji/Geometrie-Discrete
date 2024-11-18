@@ -2,37 +2,37 @@
 	"sources" : 
 	[
 		{
-			"file" : "/home/etudiants/baji2/Bureau/impression3D/Geometrie/TP1/build/_deps/eigen-subbuild/CMakeFiles/eigen-populate"
+			"file" : "/home/etudiants/baji2/Bureau/Geometrie/TP1/build/_deps/eigen-subbuild/CMakeFiles/eigen-populate"
 		},
 		{
-			"file" : "/home/etudiants/baji2/Bureau/impression3D/Geometrie/TP1/build/_deps/eigen-subbuild/CMakeFiles/eigen-populate.rule"
+			"file" : "/home/etudiants/baji2/Bureau/Geometrie/TP1/build/_deps/eigen-subbuild/CMakeFiles/eigen-populate.rule"
 		},
 		{
-			"file" : "/home/etudiants/baji2/Bureau/impression3D/Geometrie/TP1/build/_deps/eigen-subbuild/CMakeFiles/eigen-populate-complete.rule"
+			"file" : "/home/etudiants/baji2/Bureau/Geometrie/TP1/build/_deps/eigen-subbuild/CMakeFiles/eigen-populate-complete.rule"
 		},
 		{
-			"file" : "/home/etudiants/baji2/Bureau/impression3D/Geometrie/TP1/build/_deps/eigen-subbuild/eigen-populate-prefix/src/eigen-populate-stamp/eigen-populate-build.rule"
+			"file" : "/home/etudiants/baji2/Bureau/Geometrie/TP1/build/_deps/eigen-subbuild/eigen-populate-prefix/src/eigen-populate-stamp/eigen-populate-build.rule"
 		},
 		{
-			"file" : "/home/etudiants/baji2/Bureau/impression3D/Geometrie/TP1/build/_deps/eigen-subbuild/eigen-populate-prefix/src/eigen-populate-stamp/eigen-populate-configure.rule"
+			"file" : "/home/etudiants/baji2/Bureau/Geometrie/TP1/build/_deps/eigen-subbuild/eigen-populate-prefix/src/eigen-populate-stamp/eigen-populate-configure.rule"
 		},
 		{
-			"file" : "/home/etudiants/baji2/Bureau/impression3D/Geometrie/TP1/build/_deps/eigen-subbuild/eigen-populate-prefix/src/eigen-populate-stamp/eigen-populate-download.rule"
+			"file" : "/home/etudiants/baji2/Bureau/Geometrie/TP1/build/_deps/eigen-subbuild/eigen-populate-prefix/src/eigen-populate-stamp/eigen-populate-download.rule"
 		},
 		{
-			"file" : "/home/etudiants/baji2/Bureau/impression3D/Geometrie/TP1/build/_deps/eigen-subbuild/eigen-populate-prefix/src/eigen-populate-stamp/eigen-populate-install.rule"
+			"file" : "/home/etudiants/baji2/Bureau/Geometrie/TP1/build/_deps/eigen-subbuild/eigen-populate-prefix/src/eigen-populate-stamp/eigen-populate-install.rule"
 		},
 		{
-			"file" : "/home/etudiants/baji2/Bureau/impression3D/Geometrie/TP1/build/_deps/eigen-subbuild/eigen-populate-prefix/src/eigen-populate-stamp/eigen-populate-mkdir.rule"
+			"file" : "/home/etudiants/baji2/Bureau/Geometrie/TP1/build/_deps/eigen-subbuild/eigen-populate-prefix/src/eigen-populate-stamp/eigen-populate-mkdir.rule"
 		},
 		{
-			"file" : "/home/etudiants/baji2/Bureau/impression3D/Geometrie/TP1/build/_deps/eigen-subbuild/eigen-populate-prefix/src/eigen-populate-stamp/eigen-populate-patch.rule"
+			"file" : "/home/etudiants/baji2/Bureau/Geometrie/TP1/build/_deps/eigen-subbuild/eigen-populate-prefix/src/eigen-populate-stamp/eigen-populate-patch.rule"
 		},
 		{
-			"file" : "/home/etudiants/baji2/Bureau/impression3D/Geometrie/TP1/build/_deps/eigen-subbuild/eigen-populate-prefix/src/eigen-populate-stamp/eigen-populate-test.rule"
+			"file" : "/home/etudiants/baji2/Bureau/Geometrie/TP1/build/_deps/eigen-subbuild/eigen-populate-prefix/src/eigen-populate-stamp/eigen-populate-test.rule"
 		},
 		{
-			"file" : "/home/etudiants/baji2/Bureau/impression3D/Geometrie/TP1/build/_deps/eigen-subbuild/eigen-populate-prefix/src/eigen-populate-stamp/eigen-populate-update.rule"
+			"file" : "/home/etudiants/baji2/Bureau/Geometrie/TP1/build/_deps/eigen-subbuild/eigen-populate-prefix/src/eigen-populate-stamp/eigen-populate-update.rule"
 		}
 	],
 	"target" : 

@@ -1,4 +1,4 @@
-# Install script for directory: /home/etudiants/baji2/Bureau/impression3D/Geometrie/TP1
+# Install script for directory: /home/etudiants/baji2/Bureau/Geometrie/TP1
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -12,7 +12,7 @@ if(NOT DEFINED CMAKE_INSTALL_CONFIG_NAME)
     string(REGEX REPLACE "^[^A-Za-z0-9_]+" ""
            CMAKE_INSTALL_CONFIG_NAME "${BUILD_TYPE}")
   else()
-    set(CMAKE_INSTALL_CONFIG_NAME "")
+    set(CMAKE_INSTALL_CONFIG_NAME "Debug")
   endif()
   message(STATUS "Install configuration: \"${CMAKE_INSTALL_CONFIG_NAME}\"")
 endif()
@@ -43,18 +43,18 @@ if(NOT DEFINED CMAKE_OBJDUMP)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/etudiants/baji2/Bureau/impression3D/Geometrie/TP1/build/_deps/eigen-src/Eigen")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/etudiants/baji2/Bureau/Geometrie/TP1/build/_deps/eigen-src/Eigen")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xeigenx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/DGtal/3rdParties/" TYPE DIRECTORY FILES "/home/etudiants/baji2/Bureau/impression3D/Geometrie/TP1/build/_deps/eigen-src/Eigen")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/DGtal/3rdParties/" TYPE DIRECTORY FILES "/home/etudiants/baji2/Bureau/Geometrie/TP1/build/_deps/eigen-src/Eigen")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xeigenx" OR NOT CMAKE_INSTALL_COMPONENT)
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/eigen/Eigen_Targets.cmake")
     file(DIFFERENT EXPORT_FILE_CHANGED FILES
          "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/eigen/Eigen_Targets.cmake"
-         "/home/etudiants/baji2/Bureau/impression3D/Geometrie/TP1/build/CMakeFiles/Export/lib/cmake/eigen/Eigen_Targets.cmake")
+         "/home/etudiants/baji2/Bureau/Geometrie/TP1/build/CMakeFiles/Export/lib/cmake/eigen/Eigen_Targets.cmake")
     if(EXPORT_FILE_CHANGED)
       file(GLOB OLD_CONFIG_FILES "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/eigen/Eigen_Targets-*.cmake")
       if(OLD_CONFIG_FILES)
@@ -63,7 +63,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xeigenx" OR NOT CMAKE_INSTALL_COMPON
       endif()
     endif()
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/eigen" TYPE FILE FILES "/home/etudiants/baji2/Bureau/impression3D/Geometrie/TP1/build/CMakeFiles/Export/lib/cmake/eigen/Eigen_Targets.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/eigen" TYPE FILE FILES "/home/etudiants/baji2/Bureau/Geometrie/TP1/build/CMakeFiles/Export/lib/cmake/eigen/Eigen_Targets.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -74,5 +74,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/etudiants/baji2/Bureau/impression3D/Geometrie/TP1/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/etudiants/baji2/Bureau/Geometrie/TP1/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

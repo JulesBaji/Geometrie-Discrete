@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/etudiants/baji2/Bureau/impression3D/Geometrie/TP1
+CMAKE_SOURCE_DIR = /home/etudiants/baji2/Bureau/Geometrie/TP1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/etudiants/baji2/Bureau/impression3D/Geometrie/TP1/build
+CMAKE_BINARY_DIR = /home/etudiants/baji2/Bureau/Geometrie/TP1/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,9 +132,9 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/etudiants/baji2/Bureau/impression3D/Geometrie/TP1/build/CMakeFiles /home/etudiants/baji2/Bureau/impression3D/Geometrie/TP1/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/etudiants/baji2/Bureau/Geometrie/TP1/build/CMakeFiles /home/etudiants/baji2/Bureau/Geometrie/TP1/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/etudiants/baji2/Bureau/impression3D/Geometrie/TP1/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/etudiants/baji2/Bureau/Geometrie/TP1/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -162,41 +162,41 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named helloworld
+# Target rules for targets named main
 
 # Build rule for target.
-helloworld: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 helloworld
-.PHONY : helloworld
+main: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main
+.PHONY : main
 
 # fast build rule for target.
-helloworld/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/helloworld.dir/build.make CMakeFiles/helloworld.dir/build
-.PHONY : helloworld/fast
+main/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
+.PHONY : main/fast
 
-helloworld.o: helloworld.cpp.o
-.PHONY : helloworld.o
+main.o: main.cpp.o
+.PHONY : main.o
 
 # target to build an object file
-helloworld.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/helloworld.dir/build.make CMakeFiles/helloworld.dir/helloworld.cpp.o
-.PHONY : helloworld.cpp.o
+main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.o
+.PHONY : main.cpp.o
 
-helloworld.i: helloworld.cpp.i
-.PHONY : helloworld.i
+main.i: main.cpp.i
+.PHONY : main.i
 
 # target to preprocess a source file
-helloworld.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/helloworld.dir/build.make CMakeFiles/helloworld.dir/helloworld.cpp.i
-.PHONY : helloworld.cpp.i
+main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.i
+.PHONY : main.cpp.i
 
-helloworld.s: helloworld.cpp.s
-.PHONY : helloworld.s
+main.s: main.cpp.s
+.PHONY : main.s
 
 # target to generate assembly for a file
-helloworld.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/helloworld.dir/build.make CMakeFiles/helloworld.dir/helloworld.cpp.s
-.PHONY : helloworld.cpp.s
+main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.s
+.PHONY : main.cpp.s
 
 # Help Target
 help:
@@ -210,10 +210,10 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... helloworld"
-	@echo "... helloworld.o"
-	@echo "... helloworld.i"
-	@echo "... helloworld.s"
+	@echo "... main"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
 .PHONY : help
 
 

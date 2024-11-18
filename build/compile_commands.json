@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/etudiants/baji2/Bureau/Geometrie/TP1/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DEIGEN_MPL2_ONLY -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DQT_XML_LIB -DUNIX -DWITH_CAIRO -DWITH_EIGEN=true -DWITH_QT5 -DWITH_VISU3D_QGLVIEWER -isystem /usr/include/cairo -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt5/QtOpenGL -isystem /usr/include/x86_64-linux-gnu/qt5/QtXml -isystem /home/etudiants/baji2/Bureau/Geometrie/TP1/build/_deps/eigen-src -g -fPIC -std=gnu++11 -o CMakeFiles/main.dir/main.cpp.o -c /home/etudiants/baji2/Bureau/Geometrie/TP1/main.cpp",
+  "file": "/home/etudiants/baji2/Bureau/Geometrie/TP1/main.cpp"
+}
+]

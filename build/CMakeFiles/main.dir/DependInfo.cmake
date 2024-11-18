@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/etudiants/baji2/Bureau/impression3D/Geometrie/TP1/helloworld.cpp" "CMakeFiles/helloworld.dir/helloworld.cpp.o" "gcc" "CMakeFiles/helloworld.dir/helloworld.cpp.o.d"
+  "/home/etudiants/baji2/Bureau/Geometrie/TP1/main.cpp" "CMakeFiles/main.dir/main.cpp.o" "gcc" "CMakeFiles/main.dir/main.cpp.o.d"
   )
 
 # Targets to which this target links.
