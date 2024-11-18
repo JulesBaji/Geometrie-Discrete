@@ -1,0 +1,7 @@
+/home/etudiants/baji2/Bureau/impression3D/Geometrie/TP1/build/CMakeFiles/helloworld.dir
+/home/etudiants/baji2/Bureau/impression3D/Geometrie/TP1/build/CMakeFiles/edit_cache.dir
+/home/etudiants/baji2/Bureau/impression3D/Geometrie/TP1/build/CMakeFiles/rebuild_cache.dir
+/home/etudiants/baji2/Bureau/impression3D/Geometrie/TP1/build/CMakeFiles/list_install_components.dir
+/home/etudiants/baji2/Bureau/impression3D/Geometrie/TP1/build/CMakeFiles/install.dir
+/home/etudiants/baji2/Bureau/impression3D/Geometrie/TP1/build/CMakeFiles/install/local.dir
+/home/etudiants/baji2/Bureau/impression3D/Geometrie/TP1/build/CMakeFiles/install/strip.dir
