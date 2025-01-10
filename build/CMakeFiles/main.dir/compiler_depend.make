@@ -1964,8 +1964,20 @@ CMakeFiles/main.dir/main.cpp.o: ../main.cpp \
   /usr/include/QGLViewer/qglviewer.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QDateTime \
   /usr/include/QGLViewer/manipulatedCameraFrame.h \
-  /usr/include/QGLViewer/manipulatedFrame.h
+  /usr/include/QGLViewer/manipulatedFrame.h \
+  /usr/local/include/DGtal/geometry/curves/GreedySegmentation.h \
+  /usr/local/include/DGtal/geometry/curves/CForwardSegmentComputer.h \
+  /usr/local/include/DGtal/geometry/curves/CIncrementalSegmentComputer.h \
+  /usr/local/include/DGtal/geometry/curves/CSegmentFactory.h \
+  /usr/local/include/DGtal/geometry/curves/CSegment.h \
+  /usr/local/include/DGtal/geometry/curves/GreedySegmentation.ih
 
+
+/usr/local/include/DGtal/geometry/curves/GreedySegmentation.ih:
+
+/usr/local/include/DGtal/geometry/curves/CSegmentFactory.h:
+
+/usr/local/include/DGtal/geometry/curves/CForwardSegmentComputer.h:
 
 /usr/include/QGLViewer/manipulatedCameraFrame.h:
 
@@ -2498,6 +2510,8 @@ CMakeFiles/main.dir/main.cpp.o: ../main.cpp \
 /usr/local/include/DGtal/images/ImageContainerByHashTree.ih:
 
 /usr/local/include/DGtal/images/Morton.ih:
+
+/usr/local/include/DGtal/geometry/curves/CSegment.h:
 
 /usr/local/include/DGtal/images/Morton.h:
 
@@ -3785,6 +3799,8 @@ CMakeFiles/main.dir/main.cpp.o: ../main.cpp \
 
 /usr/include/c++/11/backward/binders.h:
 
+/usr/local/include/DGtal/geometry/curves/CIncrementalSegmentComputer.h:
+
 /usr/include/boost/icl/type_traits/element_type_of.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/struct_mutex.h:
@@ -4126,6 +4142,8 @@ CMakeFiles/main.dir/main.cpp.o: ../main.cpp \
 /usr/include/boost/type_traits/is_member_function_pointer.hpp:
 
 /usr/include/c++/11/bits/uniform_int_dist.h:
+
+/usr/local/include/DGtal/geometry/curves/GreedySegmentation.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qflags.h:
 

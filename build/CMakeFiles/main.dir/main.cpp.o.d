@@ -1842,4 +1842,10 @@ CMakeFiles/main.dir/main.cpp.o: \
  /usr/include/QGLViewer/qglviewer.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QDateTime \
  /usr/include/QGLViewer/manipulatedCameraFrame.h \
- /usr/include/QGLViewer/manipulatedFrame.h
+ /usr/include/QGLViewer/manipulatedFrame.h \
+ /usr/local/include/DGtal/geometry/curves/GreedySegmentation.h \
+ /usr/local/include/DGtal/geometry/curves/CForwardSegmentComputer.h \
+ /usr/local/include/DGtal/geometry/curves/CIncrementalSegmentComputer.h \
+ /usr/local/include/DGtal/geometry/curves/CSegmentFactory.h \
+ /usr/local/include/DGtal/geometry/curves/CSegment.h \
+ /usr/local/include/DGtal/geometry/curves/GreedySegmentation.ih
