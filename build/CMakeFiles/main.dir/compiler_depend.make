@@ -1970,8 +1970,53 @@ CMakeFiles/main.dir/main.cpp.o: ../main.cpp \
   /usr/local/include/DGtal/geometry/curves/CIncrementalSegmentComputer.h \
   /usr/local/include/DGtal/geometry/curves/CSegmentFactory.h \
   /usr/local/include/DGtal/geometry/curves/CSegment.h \
-  /usr/local/include/DGtal/geometry/curves/GreedySegmentation.ih
+  /usr/local/include/DGtal/geometry/curves/GreedySegmentation.ih \
+  /usr/include/x86_64-linux-gnu/sys/stat.h \
+  /usr/include/x86_64-linux-gnu/bits/stat.h \
+  /usr/include/x86_64-linux-gnu/bits/struct_stat.h \
+  /usr/include/x86_64-linux-gnu/bits/statx.h \
+  /usr/include/linux/stat.h \
+  /usr/include/linux/types.h \
+  /usr/include/x86_64-linux-gnu/asm/types.h \
+  /usr/include/asm-generic/types.h \
+  /usr/include/asm-generic/int-ll64.h \
+  /usr/include/x86_64-linux-gnu/asm/bitsperlong.h \
+  /usr/include/asm-generic/bitsperlong.h \
+  /usr/include/linux/posix_types.h \
+  /usr/include/linux/stddef.h \
+  /usr/include/x86_64-linux-gnu/asm/posix_types.h \
+  /usr/include/x86_64-linux-gnu/asm/posix_types_64.h \
+  /usr/include/asm-generic/posix_types.h \
+  /usr/include/x86_64-linux-gnu/bits/statx-generic.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_statx_timestamp.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_statx.h
 
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_statx_timestamp.h:
+
+/usr/include/x86_64-linux-gnu/bits/statx-generic.h:
+
+/usr/include/asm-generic/posix_types.h:
+
+/usr/include/x86_64-linux-gnu/asm/posix_types.h:
+
+/usr/include/linux/posix_types.h:
+
+/usr/include/x86_64-linux-gnu/asm/bitsperlong.h:
+
+/usr/include/asm-generic/int-ll64.h:
+
+/usr/include/asm-generic/types.h:
+
+/usr/include/x86_64-linux-gnu/asm/types.h:
+
+/usr/include/linux/types.h:
+
+/usr/include/linux/stat.h:
+
+/usr/include/x86_64-linux-gnu/bits/statx.h:
+
+/usr/include/x86_64-linux-gnu/bits/struct_stat.h:
 
 /usr/local/include/DGtal/geometry/curves/GreedySegmentation.ih:
 
@@ -2881,6 +2926,8 @@ CMakeFiles/main.dir/main.cpp.o: ../main.cpp \
 
 /usr/include/boost/type_traits/has_unary_minus.hpp:
 
+/usr/include/x86_64-linux-gnu/bits/types/struct_statx.h:
+
 /usr/include/boost/type_traits/has_trivial_move_assign.hpp:
 
 /usr/include/boost/icl/closed_interval.hpp:
@@ -3074,6 +3121,8 @@ CMakeFiles/main.dir/main.cpp.o: ../main.cpp \
 /usr/include/boost/type_traits/remove_bounds.hpp:
 
 /usr/include/boost/math/tools/convert_from_string.hpp:
+
+/usr/include/x86_64-linux-gnu/sys/stat.h:
 
 /usr/include/boost/type_traits/has_nothrow_constructor.hpp:
 
@@ -3404,6 +3453,8 @@ CMakeFiles/main.dir/main.cpp.o: ../main.cpp \
 /usr/include/boost/move/iterator.hpp:
 
 /usr/include/c++/11/bit:
+
+/usr/include/linux/stddef.h:
 
 /usr/include/boost/mpl/vector/aux_/at.hpp:
 
@@ -3783,6 +3834,8 @@ CMakeFiles/main.dir/main.cpp.o: ../main.cpp \
 
 /usr/include/c++/11/numeric:
 
+/usr/include/x86_64-linux-gnu/bits/stat.h:
+
 /usr/include/boost/mpl/aux_/is_msvc_eti_arg.hpp:
 
 /usr/include/boost/icl/detail/interval_subset_comparer.hpp:
@@ -4094,6 +4147,8 @@ CMakeFiles/main.dir/main.cpp.o: ../main.cpp \
 /usr/include/c++/11/bits/stl_iterator.h:
 
 /usr/include/c++/11/ext/atomicity.h:
+
+/usr/include/x86_64-linux-gnu/asm/posix_types_64.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtGui/qinputmethod.h:
 
@@ -4834,6 +4889,8 @@ CMakeFiles/main.dir/main.cpp.o: ../main.cpp \
 /usr/include/boost/mpl/iter_fold_if.hpp:
 
 /usr/include/boost/mpl/or.hpp:
+
+/usr/include/asm-generic/bitsperlong.h:
 
 /usr/include/boost/mpl/aux_/preprocessed/gcc/or.hpp:
 
