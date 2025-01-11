@@ -1,0 +1,20 @@
+# Ignore all directories starting with 'boundary_'
+boundary_*/
+
+# Ignore all directories starting with 'component_'
+component_*/
+
+# Ignore all directories starting with 'polygonization_'
+polygonization_*/
+
+# Ignore any temporary files or files created by the build process (optional)
+*.log
+*.tmp
+*.bak
+*.swp
+
+# Ignore compiled binaries or object files
+*.o
+*.out
+*.exe
+*.dSYM
