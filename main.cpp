@@ -46,7 +46,6 @@ Curve getBoundary(T & object, std::vector<Point> boundaryPoints)
     Z2i::SCell bel = Surfaces<Z2i::KSpace>::findABel(kSpace, object.pointSet(), 10000);
     // 2) Call Surfece::track2DBoundaryPoints to extract the boundary of the object
     SurfelAdjacency<KSpace::dimension> SAdj( true );
-    // Surfaces<Z2i::KSpace>::track2DBoundaryPoints(kSpace, object.pointSet(), cell_bel, boundaryPoints);
     Surfaces<KSpace>::track2DBoundaryPoints( boundaryPoints, kSpace, SAdj, object.pointSet(), bel );
     Curve boundaryCurve;
     // 3) Create a curve from a vector
@@ -130,6 +129,38 @@ double calculatePolygonPerimeter(const std::vector<LibBoard::Point>& polygon) {
     return perimeter;
 }
 
+double calculateMean(const std::vector<double>& values) {
+    double sum = 0;
+    for (double v : values) {
+        sum += v;
+    }
+    return sum / values.size();
+}
+
+double calculateVariance(const std::vector<double>& values, double mean) {
+    double variance = 0;
+    for (double v : values) {
+        variance += (v - mean) * (v - mean);
+    }
+    return variance / values.size();
+}
+
+void calculateAndDisplayStatistics(
+    const std::string& title,
+    const std::vector<double>& values)
+{
+    if (values.empty())
+    {
+        std::cout << title << ": No data available.\n";
+        return;
+    }
+
+    double mean = calculateMean(values);
+    double variance = calculateVariance(values, mean);
+    std::cout << title << ":" << std::endl;
+    std::cout << "Mean = " << mean << ", Variance = " << variance << std::endl;
+}
+
 int main(int argc, char** argv)
 {
     // Step 1
@@ -145,9 +176,14 @@ int main(int argc, char** argv)
         "../RiceGrains/Rice_basmati_seg_bin.pgm"
     };
 
+    std::vector<double> camargueAreas, camarguePolygonAreas, camarguePerimeters, camarguePolygonPerimeters, camargueCircularities;
+    std::vector<double> japonaisAreas, japonaisPolygonAreas, japonaisPerimeters, japonaisPolygonPerimeters, japonaisCircularities;
+    std::vector<double> basmatiAreas, basmatiPolygonAreas, basmatiPerimeters, basmatiPolygonPerimeters, basmatiCircularities;
+
     // Iterate over each image
-    for (const auto& imagePath : imagePaths)
+    for (size_t imgIdx = 0; imgIdx < imagePaths.size(); ++imgIdx)
     {
+        const std::string& imagePath = imagePaths[imgIdx];
         // Read image
         Image image = PGMReader<Image>::importPGM(imagePath.c_str()); // provide image path
         Z2i::DigitalSet set2d(image.domain());
@@ -162,7 +198,7 @@ int main(int argc, char** argv)
         // Set the adjacency pair and obtain the connected components
         ObjectType object8_4(dt8_4, set2d);
         object8_4.writeComponents(inserter);
-        std::cout << "Number of components: " << objects.size() << std::endl;
+        std::cout << "Image: " << imagePath << " - Number of components: " << objects.size() << std::endl;
 
         // Step 2: Removal of partially outside components
         objects.erase(
@@ -178,7 +214,7 @@ int main(int argc, char** argv)
             }),
             objects.end()
         );
-        std::cout << "Number of entirely inside components: " << objects.size() << std::endl;
+        std::cout << "Image: " << imagePath << " - Number of entirely inside components: " << objects.size() << std::endl;
 
         // Create image-specific folders
         std::string imageName = imagePath.substr(imagePath.find_last_of("/") + 1, imagePath.find_last_of(".") - imagePath.find_last_of("/") - 1);
@@ -186,26 +222,20 @@ int main(int argc, char** argv)
         std::string componentDir = "component_" + imageName;
         std::string polygonizationDir = "polygonization_" + imageName;
 
-        if (mkdir(boundaryDir.c_str(), 0777) == -1) {
-            std::cerr << "Error creating directory / already created " << boundaryDir << std::endl;
-        }
-        if (mkdir(componentDir.c_str(), 0777) == -1) {
-            std::cerr << "Error creating directory / already created  " << componentDir << std::endl;
-        }
-        if (mkdir(polygonizationDir.c_str(), 0777) == -1) {
-            std::cerr << "Error creating directory / already created  " << polygonizationDir << std::endl;
-        }
+        mkdir(boundaryDir.c_str(), 0777);
+        mkdir(componentDir.c_str(), 0777);
+        mkdir(polygonizationDir.c_str(), 0777);
 
         // Iterate through each object and process them
         for (size_t i = 0; i < objects.size(); ++i)
         {
-            // Step 3: Boundary extraction
+            // Step 2
             Board2D aBoard;
             sendToBoard(aBoard, objects[i], Color::Red);
             std::string componentFilename = componentDir + "/out_component_" + std::to_string(i) + ".pdf";
             aBoard.saveCairo(componentFilename.c_str(), Board2D::CairoPDF);
 
-            // Step 4: Get boundary curve and draw it
+            // Step 3
             Board2D aBoard2;
             std::vector<Point> boundaryPoints;
             Curve boundaryCurve = getBoundary(objects[i], boundaryPoints);
@@ -213,7 +243,7 @@ int main(int argc, char** argv)
             std::string boundaryFilename = boundaryDir + "/out_boundary_" + std::to_string(i) + ".pdf";
             aBoard2.saveCairo(boundaryFilename.c_str(), Board2D::CairoPDF);
 
-            // Step 5: Polygonize the boundary and save result
+            // Step 4
             std::vector<LibBoard::Point> libboardPoints;
             polygonizeBoundary(boundaryCurve, libboardPoints);
             Board2D aBoard3;
@@ -221,21 +251,59 @@ int main(int argc, char** argv)
             std::string polygonizationFilename = polygonizationDir + "/polygonization_" + std::to_string(i) + ".pdf";
             aBoard3.saveCairo(polygonizationFilename.c_str(), Board2D::CairoPDF);
 
-            // Step 6: Calculate and print areas and perimeters
-            std::cout << "Area for object " << i << ": " << objects[i].pointSet().size() << std::endl;
+            // Step 5
+            double area = objects[i].pointSet().size();
             double polygonArea = calculatePolygonArea(libboardPoints);
-            std::cout << "Polygon area for object " << i << ": " << polygonArea << std::endl;
 
-            // Step 7: Calculate and print perimeter and circularity
-            std::cout << "Perimeter (1-cellules) for object " << i << ": " << boundaryCurve.size() << std::endl;
+            // Step 6
+            double perimeter = boundaryCurve.size() ;
             double polygonPerimeter = calculatePolygonPerimeter(libboardPoints);
-            std::cout << "Polygon perimeter for object " << i << ": " << polygonPerimeter << std::endl;
 
-            // Step 8: Calculate and print circularity
+            // Step 7
             double circularity = (4 * M_PI * polygonArea) / (polygonPerimeter * polygonPerimeter);
-            std::cout << "Circularity for object " << i << ": " << circularity << std::endl;
+
+            if (imgIdx == 0) { // Rice Camargue
+                camargueAreas.push_back(area);
+                camarguePolygonAreas.push_back(polygonArea);
+                camarguePerimeters.push_back(perimeter);
+                camarguePolygonPerimeters.push_back(polygonPerimeter);
+                camargueCircularities.push_back(circularity);
+            } else if (imgIdx == 1) { // Rice Japonais
+                japonaisAreas.push_back(area);
+                japonaisPolygonAreas.push_back(polygonArea);
+                japonaisPerimeters.push_back(perimeter);
+                japonaisPolygonPerimeters.push_back(polygonPerimeter);
+                japonaisCircularities.push_back(circularity);
+            } else if (imgIdx == 2) { // Rice Basmati
+                basmatiAreas.push_back(area);
+                basmatiPolygonAreas.push_back(polygonArea);
+                basmatiPerimeters.push_back(perimeter);
+                basmatiPolygonPerimeters.push_back(polygonPerimeter);
+                basmatiCircularities.push_back(circularity);
+            }
         }
     }
+
+    std::cout << "Results for Rice Camargue:" << std::endl;
+    calculateAndDisplayStatistics("Average and Variance for Areas", camargueAreas);
+    calculateAndDisplayStatistics("Average and Variance for Polygonal Areas", camarguePolygonAreas);
+    calculateAndDisplayStatistics("Average and Variance for Perimeters", camarguePerimeters);
+    calculateAndDisplayStatistics("Average and Variance for Polygonal Perimeters", camarguePolygonPerimeters);
+    calculateAndDisplayStatistics("Average and Variance for Circularity", camargueCircularities);
+
+    std::cout << "Results for Rice Japonais:" << std::endl;
+    calculateAndDisplayStatistics("Average and Variance for Areas", japonaisAreas);
+    calculateAndDisplayStatistics("Average and Variance for Polygonal Areas", japonaisPolygonAreas);
+    calculateAndDisplayStatistics("Average and Variance for Perimeters", japonaisPerimeters);
+    calculateAndDisplayStatistics("Average and Variance for Polygonal Perimeters", japonaisPolygonPerimeters);
+    calculateAndDisplayStatistics("Average and Variance for Circularity", japonaisCircularities);
+
+    std::cout << "Results for Rice Basmati:" << std::endl;
+    calculateAndDisplayStatistics("Average and Variance for Areas", basmatiAreas);
+    calculateAndDisplayStatistics("Average and Variance for Polygonal Areas", basmatiPolygonAreas);
+    calculateAndDisplayStatistics("Average and Variance for Perimeters", basmatiPerimeters);
+    calculateAndDisplayStatistics("Average and Variance for Polygonal Perimeters", basmatiPolygonPerimeters);
+    calculateAndDisplayStatistics("Average and Variance for Circularity", basmatiCircularities);
 
     return 0;
 }
