@@ -4,6 +4,10 @@ Projet de géométrie discrète du master Informatique ISICG (Université de Lim
 
 À partir d'images binaires de grains de riz de trois variétés (camargue, japonais, basmati), le programme mesure la forme de chaque grain et compare les variétés.
 
+![Grains de riz basmati, camargue et japonais : contours puis polygones, colorés selon la circularité](docs/geometrie.gif)
+
+*Basmati, camargue et japonais (de gauche à droite). Les grains qui touchent le bord sont écartés (en rouge), puis le contour de chaque grain est suivi et polygonisé ; la couleur finale indique la circularité, de l'orange (allongé) au bleu (rond). Contours et polygones sont ceux calculés par le programme ; l'animation est générée à partir de ces résultats.*
+
 ## Étapes
 
 1. Lecture des images et extraction des **composantes connexes** (adjacence 8-4).
