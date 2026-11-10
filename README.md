@@ -1,6 +1,6 @@
 # Géométrie discrète : analyse de grains de riz
 
-Projet de géométrie discrète du master Informatique ISICG (Université de Limoges, 2024-2025), en C++ avec la bibliothèque [DGtal](https://dgtal.org/).
+Projet de géométrie discrète du master Informatique ISICG (Université de Limoges, 2024-2025), en C avec la bibliothèque [DGtal](https://dgtal.org/).
 
 À partir d'images binaires de grains de riz de trois variétés (camargue, japonais, basmati), le programme mesure la forme de chaque grain et compare les variétés.
 
@@ -32,4 +32,4 @@ make
 
 ## Technologies
 
-C++, DGtal, CMake.
+C, DGtal, CMake.
